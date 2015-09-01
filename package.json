@@ -1,7 +1,7 @@
 {
-  "name": "marionette-wires",
+  "name": "tada-frontend",
   "version": "0.0.0",
-  "description": "Starter kit for Marionette.js Applications using Browserify",
+  "description": "Tada (using marionette starter kit from https://github.com/thejameskyle/marionette-wires)",
   "main": "index.js",
   "scripts": {
     "start": "gulp build && node server",
@@ -18,12 +18,12 @@
     "browserify",
     "backbone"
   ],
-  "author": "James Kyle <me@thejameskyle.com>",
+  "author": "KLP <dev@klp.org.in>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thejameskyle/marionette-wires/issues"
+    "url": "https://github.com/klpdotorg"
   },
-  "homepage": "https://github.com/thejameskyle/marionette-wires",
+  "homepage": "https://github.com/klpdotorg",
   "devDependencies": {
     "babel": "^4.6.3",
     "babelify": "^5.0.3",
@@ -39,11 +39,11 @@
     "gulp-autoprefixer": "^2.1.0",
     "gulp-env": "^0.2.0",
     "gulp-jshint": "^1.9.0",
-    "gulp-less": "^3.0.1",
     "gulp-load-plugins": "^0.8.0",
     "gulp-mocha": "^2.0.0",
     "gulp-plumber": "^0.6.6",
     "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^1.4.0",
     "gulp-sourcemaps": "^1.3.0",
     "gulp-symlink": "^2.1.0",
     "gulp-util": "^3.0.2",
@@ -54,6 +54,7 @@
     "minimatch": "^2.0.1",
     "mocha": "^2.1.0",
     "morgan": "^1.5.1",
+    "node-sass": "^3.3.2",
     "pioneer": "^0.11.0",
     "proxyquire": "^1.3.0",
     "request": "^2.51.0",

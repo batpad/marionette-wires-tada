@@ -1,4 +1,4 @@
-Marionette Wires
+TADA Frontend
 ================
 
 An opinionated example application built with Marionette.js.
@@ -37,4 +37,4 @@ As a general rule, be sure to read through all of the source code yourself and m
 
 ===
 
-&copy; 2014 James Kyle. Distributed under [ISC license](LICENSE.md).
+&copy; 2015 KLP. Distributed under [ISC license](LICENSE.md).
