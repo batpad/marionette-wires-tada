@@ -1,5 +1,9 @@
 var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
+var $ = require('gulp-load-plugins')({
+  rename: {
+    'gulp-ruby-sass': 'sass'
+  }
+});
 var browserify = require('browserify');
 var del = require('del');
 var watchify = require('watchify');
@@ -25,14 +29,23 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('sass', function() {
+  return $.sass('sass/style.scss')
+    .on('error', $.sass.logError)
+    .pipe($.rename('bundle.css'))
+    .pipe(gulp.dest('./dist'))
+});
+
+/*
 gulp.task('styles', function() {
-  return gulp.src('./src/main.less')
-    .pipe($.less())
-    .pipe($.autoprefixer())
+  return gulp.src('./sass/style.scss')
+    .pipe($.sass())
+    //.pipe($.autoprefixer())
     .pipe($.rename('bundle.css'))
     .pipe(gulp.dest('./dist'))
     .pipe(reload({ stream: true }));
 });
+*/
 
 var bundler = _.memoize(function(watch) {
   var options = {debug: true};
@@ -96,9 +109,9 @@ gulp.task('mocha', ['jshint'], function() {
 gulp.task('build', [
   'clean',
   'html',
-  'styles',
+  'sass',
   'scripts',
-  'test'
+  //'test'
 ]);
 
 gulp.task('test', [
@@ -122,7 +135,7 @@ gulp.task('watch', ['build'], function(cb) {
     gulp.start('test');
   });
   gulp.watch('./test/**/*.js', ['test']);
-  gulp.watch(['./src/main.less', './src/**/*.less'], ['styles']);
+  gulp.watch(['./sass/style.scss', './sass/**/*.scss'], ['sass']);
   gulp.watch(['./src/*.html'], ['html']);
 });
 
