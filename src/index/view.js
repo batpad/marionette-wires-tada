@@ -1,7 +1,10 @@
-import {ItemView} from 'backbone.marionette';
+import {LayoutView} from 'backbone.marionette';
 import template from './template.hbs';
 
-export default ItemView.extend({
+export default LayoutView.extend({
   template: template,
   className: 'index',
+  regions: {
+
+  }
 });

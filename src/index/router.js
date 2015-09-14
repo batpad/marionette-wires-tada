@@ -7,11 +7,11 @@ export default Router.extend({
     this.container = options.container;
   },
 
-  onBeforeEnter() {
-    HeaderService.request('activate', {
-      path: ''
-    });
-  },
+  // onBeforeEnter() {
+  //   HeaderService.request('activate', {
+  //     path: ''
+  //   });
+  // },
 
   routes: {
     '': 'index'
