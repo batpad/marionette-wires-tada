@@ -4,5 +4,8 @@ import template from './navbar.hbs';
 
 export default ItemView.extend({
   template: template,
-  className: 'container-fluid'
+  className: 'container-fluid',
+  onRender() {
+    console.log("navbar view rendered");
+  }
 });

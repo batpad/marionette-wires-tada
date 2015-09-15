@@ -18,6 +18,7 @@ export default LayoutView.extend({
   },
 
   onRender() {
+    console.log("application layout rendered");
     this.navbar.show(new NavbarView());
     //this.schooltypes.show(new SchoolTypesView());
 

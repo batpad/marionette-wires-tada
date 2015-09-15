@@ -35,7 +35,7 @@ $(document).ajaxError(() => {
 });
 
 app.index = new IndexRouter({
-  container: app.layout.main
+  container: app.layout.content
 });
 
 
