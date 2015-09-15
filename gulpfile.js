@@ -4,6 +4,7 @@ var $ = require('gulp-load-plugins')({
     'gulp-ruby-sass': 'sass'
   }
 });
+var changed = require('gulp-changed');
 var browserify = require('browserify');
 var del = require('del');
 var watchify = require('watchify');
@@ -38,6 +39,7 @@ gulp.task('sass', function() {
 
 gulp.task('assets', function() {
   return gulp.src('./src/assets/**/*',{ "base" : "./src/" })
+    .pipe(changed('./dist'))
     .pipe(gulp.dest('./dist'));
 });
 
