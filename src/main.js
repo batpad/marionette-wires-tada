@@ -38,14 +38,4 @@ app.index = new IndexRouter({
   container: app.layout.content
 });
 
-
-
-// app.colors = new ColorsRouter({
-//   container: app.layout.content
-// });
-
-// app.books = new BooksRouter({
-//   container: app.layout.content
-// });
-
 Backbone.history.start();
