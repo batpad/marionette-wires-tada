@@ -36,6 +36,11 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./dist'))
 });
 
+gulp.task('assets', function() {
+  return gulp.src('./src/assets/**/*',{ "base" : "./src/" })
+    .pipe(gulp.dest('./dist'));
+});
+
 /*
 gulp.task('styles', function() {
   return gulp.src('./sass/style.scss')
@@ -111,6 +116,7 @@ gulp.task('build', [
   'html',
   'sass',
   'scripts',
+  'assets'
   //'test'
 ]);
 
