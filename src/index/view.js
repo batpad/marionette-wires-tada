@@ -1,10 +1,10 @@
-import {LayoutView} from 'backbone.marionette';
+import {ItemView} from 'backbone.marionette';
 import template from './template.hbs';
 
-export default LayoutView.extend({
+export default ItemView.extend({
   template: template,
-  className: 'index',
-  regions: {
-
+  className: 'container-fluid',
+  onRender() {
+    console.log("index view rendered");
   }
 });
